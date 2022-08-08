@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="assets/style.css" />
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="container">
+      <div class="card-container">
+        <div class="card">
+          <div class="card-dot">
+            <div class="dot filled"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">0000 0000 0000 0000</div>
+            <div class="card-info2">
+              <div class="cardholder-name">Jane Appleseed</div>
+              <div class="card-expdate">00/00</div>
+            </div>
+          </div>
+        </div>
+        <div class="back-card">000</div>
+      </div>
+      <div class="form-container">
+        <form id="form" action="/">
+          <div class="form-control">
+            <label for="">Cardholder Name </label>
+            <input
+              type="text"
+              id="username"
+              placeholder="e.g. Jane Appleseed"
+            />
+            <small>Can't be blank</small>
+          </div>
+          <div class="form-control">
+            <label for="">Card Number </label>
+            <input
+              type="text"
+              id="number"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+            <small>Wrong format, numbers only</small>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-control">
+                <label for="">Exp. Date (MM/YY) </label>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-control">
+                      <input type="text" id="month" placeholder="MM" />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-control">
+                      <input type="text" id="year" placeholder="YY" />
+                    </div>
+                  </div>
+                </div>
+                <small>Can't be blank</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-control">
+                <label for="">CVC </label>
+                <input type="text" id="cvc" placeholder="e.g. 123 Confirm" />
+                <small>Can't be blank</small>
+              </div>
+            </div>
+          </div>
+          <button type="submit">Confirm</button>
+        </form>
+        <!-- Completed state start -->
+        <div class="hide">
+          Thank you! We've added your card details Continue
+        </div>
+      </div>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script src="assets/main.js"></script>
+  </body>
+</html>
