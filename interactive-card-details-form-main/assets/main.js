@@ -18,7 +18,8 @@ number.addEventListener("input", function (e) {
     .trim();
 
   const cardNumber = document.getElementsByClassName("card-number");
-  cardNumber[0].innerText = e.target.value;
+
+  if (e.target.value.length <= 19) cardNumber[0].innerText = e.target.value;
 });
 
 username.addEventListener("input", function (e) {
@@ -30,9 +31,15 @@ month.addEventListener("input", function (e) {
   const month = document.getElementsByClassName("month");
   month[0].innerText = e.target.value;
 });
+
 year.addEventListener("input", function (e) {
   const year = document.getElementsByClassName("year");
   year[0].innerText = e.target.value;
+});
+
+cvc.addEventListener("input", function (e) {
+  const cvc = document.getElementById("cvc-num");
+  if (e.target.value.length <= 6) cvc.innerText = e.target.value;
 });
 
 function checkInputs() {
