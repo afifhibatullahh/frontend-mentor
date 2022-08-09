@@ -2,7 +2,11 @@
 
 :root {
   /* PRIMARY COLOR */
-  --Linear-gradient: linear-gradient(#6448fe, #600594);
+  --Linear-gradient: linear-gradient(
+    180deg,
+    rgba(100, 72, 254, 1) 31%,
+    rgba(96, 5, 148, 1) 87%
+  );
   --Red: hsl(0, 100%, 66%);
   /* NEUTRAL COLOR */
   --White: hsl(0, 0%, 100%);
@@ -118,9 +122,14 @@ form {
   position: relative;
   margin-bottom: 20px;
 }
+.input-control {
+  position: relative;
+}
 .form-control label {
   display: flex;
-  font-size: 12px;
+  font-size: 16px;
+  color: var(--Very-dark-violet);
+  font-weight: 600;
 }
 .form-control input {
   padding: 15px;
@@ -162,9 +171,51 @@ form {
 .form-control small {
   visibility: hidden;
 }
+
 .form-control.error small {
   visibility: hidden;
   color: var(--Red);
+}
+
+.hide {
+  visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-container .icon {
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+  color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: var(--Linear-gradient);
+  margin-bottom: 28px;
+}
+
+.message-container .icon i {
+  font-size: 30px;
+}
+
+.message-container h2 {
+  font-size: 28px;
+  margin-bottom: 28px;
+}
+
+.message-container p {
+  color: #868485;
+  font-size: 18px;
+  margin-bottom: 28px;
 }
 
 button {
@@ -175,4 +226,33 @@ button {
   padding: 15px;
   border-radius: 10px;
   cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background: var(--Linear-gradient);
+  border: none;
+}
+@media screen and (max-width: 1100px) {
+  body {
+    background-image: url("./images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .card {
+    margin-top: -90px;
+  }
 }
