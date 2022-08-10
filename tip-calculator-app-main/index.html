@@ -1,98 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <title>Frontend Mentor | Tip calculator app</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <h1 class="title">
+      SPLI <br />
+      TTER
+    </h1>
 
-<body>
-  <h1>SPLITTER</h1>
-
-  <div class="container-tip">
-
-    <div class="left-tip">
-      <h4>
-        Bill
-      </h4>
-      <input type="number" id="bill" value=0 class="input-bill">
-      <h4>
-        Select Tip %
-      </h4>
-      <div class="row">
-        <div class="box-tip" id="tip-5">
-          5%
+    <div class="container-tip">
+      <div class="left-tip">
+        <h4>Bill</h4>
+        <input type="number" id="bill" value="0" class="input-bill" />
+        <h4>Select Tip %</h4>
+        <div class="row">
+          <div class="box-tip" id="tip-5">5%</div>
+          <div class="box-tip" id="tip-10">10%</div>
+          <div class="box-tip" id="tip-15">15%</div>
         </div>
-        <div class="box-tip" id="tip-10">
-          10%
+        <div class="row">
+          <div class="box-tip" id="tip-25">25%</div>
+          <div class="box-tip" id="tip-50">50%</div>
+          <input class="box-tip custom" id="tip-custom" type="number" placeholder="CUSTOM">
+            <!-- <input type="number" class="custom-input" placeholder="CUSTOM"> -->
+        </input>
         </div>
-        <div class="box-tip" id="tip-15">
-          15%
-        </div>
+
+        <h4>Number of People</h4>
+        <input
+          type="number"
+          id="num-people"
+          value="0"
+          placeholder="0"
+          class="input-people"
+        />
       </div>
-      <div class="row">
-        <div class="box-tip" id="tip-25">
-          25%
-        </div>
-        <div class="box-tip" id="tip-50">
-          50%
-        </div>
-        <div class="box-tip custom" id="tip-custom">
-          <!-- <input type="number" class="custom-input" placeholder="CUSTOM"> -->
-        </div>
-      </div>
 
-      <h4>
-        Number of People
-      </h4>
-      <input type="number" id="num-people" value=0 placeholder="0" class="input-people">
+      <div class="right-tip">
+        <div>
+          <div class="tip-amount">
+            <div class="label-tip">
+              <h3>Tip Amount</h3>
+              <h5>/ person</h5>
+            </div>
+            <div class="tip-number" id="tip-number">$0.00</div>
+          </div>
+          <div class="tip-total">
+            <div class="label-total">
+              <h3>Total</h3>
+              <h5>/ person</h5>
+            </div>
+            <div class="tip-person" id="tip-person">$0.00</div>
+          </div>
+        </div>
+        <button class="btn-reset" id="btn-reset">Reset</button>
+      </div>
     </div>
 
-    <div class="right-tip">
-      <div>
-        <div class="tip-amount">
-          <div class="label-tip">
-            <h3>
-              Tip Amount
-            </h3>
-            <h5>
-              / person
-            </h5>
-          </div>
-          <div class="tip-number" id="tip-number">0.00</div>
-        </div>
-        <div class="tip-total">
-          <div class="label-total">
-            <h3>
-              Total
-            </h3>
-            <h5>
-              / person
-            </h5>
-          </div>
-          <div class="tip-person" id="tip-person">$0.00</div>
-        </div>
-      </div>
-      <button class="btn-reset" id="btn-reset">
-        Reset
-      </button>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.frontendmentor.io/profile/afifhibatullahh">Afif Hibatullah</a>.
     </div>
-  </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
