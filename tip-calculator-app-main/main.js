@@ -1,0 +1,1 @@
+let tip5 = document.getElementsByClassName()
