@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --VeryDarkCyan: hsl(183, 100%, 15%);
+  --DarkGrayishCyan: hsl(186, 14%, 43%);
+  --GrayishCyan: hsl(184, 14%, 56%);
+  --LightGrayishCyan: hsl(185, 41%, 84%);
+  --VeryLightGrayishCyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--LightGrayishCyan);
+}
+
+.container-tip {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: row;
+  padding: 32px;
+  border-radius: 25px;
+}
+
+.left-tip {
+  padding: 40px;
+}
+.right-tip {
+  background-color: var(--VeryDarkCyan);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 25px;
+  color: var(--VeryLightGrayishCyan);
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box-tip {
+  width: 30%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 5px;
+  background-color: var(--VeryDarkCyan);
+  color: var(--VeryLightGrayishCyan);
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.box-tip:hover {
+  background: #22c4ad;
+  color: var(--VeryDarkCyan);
+  cursor: pointer;
+}
+
+.row :nth-child(1) {
+  margin-left: 0;
+}
+.row :nth-child(3) {
+  margin-right: 0;
+}
+
+input {
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  background: var(--VeryLightGrayishCyan);
+  padding: 10px;
+  text-align: right;
+}
+
+/* input.custom-input {
+  width: 100%;
+  height: 10px;
+  opacity: 0;
+} */
+
+input:focus {
+  outline: none;
+}
+
+.tip-amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tip-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.tip-number {
+  width: 180px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-reset {
+  background: #0d686d;
+  padding: 10px;
+  border: none;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 10px;
+  color: var(--VeryDarkCyan);
+}
+
+.btn-reset:hover {
+  background: #22c4ad;
+  color: var(--VeryDarkCyan);
+  cursor: pointer;
+}
+
+h4 {
+  margin-top: 25px;
+  color: var(--GrayishCyan);
+}
