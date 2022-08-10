@@ -16,17 +16,20 @@ box.forEach((element) => {
     tip = parseInt(e.target.textContent);
     if (picked != undefined) picked.classList.remove("pick");
     picked = e.target;
+    console.log(picked);
     e.target.classList.add("pick");
     totalbill(tip, bill.value, numPeople.value);
   });
 });
 
-tipCustom.addEventListener("input", (e) => {
-  tip = parseInt(e.target.value);
-  if (picked != undefined) picked.classList.remove("pick");
-  picked = e.target;
-  e.target.classList.add("pick");
-  totalbill(tip, parseInt(bill.value), parseInt(numPeople.value));
+["input", "click"].forEach((evt) => {
+  tipCustom.addEventListener(evt, (e) => {
+    tip = parseInt(e.target.value);
+    if (picked != undefined) picked.classList.remove("pick");
+    picked = e.target;
+    e.target.classList.add("pick");
+    totalbill(tip, parseInt(bill.value), parseInt(numPeople.value));
+  });
 });
 
 bill.addEventListener("input", (e) => {
@@ -39,7 +42,7 @@ numPeople.addEventListener("input", (e) => {
 
 const btnReset = document.getElementById("btn-reset");
 
-btnReset.addEventListener("click", () => {
+btnReset.addEventListener("click", (e) => {
   totalbill(0, 0, 0);
   if (picked != undefined) picked.classList.remove("pick");
   // console.log(bill.value );
