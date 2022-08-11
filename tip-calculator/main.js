@@ -7,7 +7,7 @@ const tipCustom = document.getElementById("tip-custom");
 const bill = document.getElementById("bill");
 const numPeople = document.getElementById("num-people");
 
-const box = [tip5, tip10, tip15, tip25, tip50, tipCustom];
+const box = [tip5, tip10, tip15, tip25, tip50];
 let picked;
 let tip = 0;
 
@@ -16,8 +16,19 @@ box.forEach((element) => {
     tip = parseInt(e.target.textContent);
     if (picked != undefined) picked.classList.remove("pick");
     picked = e.target;
+    console.log(picked);
     e.target.classList.add("pick");
     totalbill(tip, bill.value, numPeople.value);
+  });
+});
+
+["input", "click"].forEach((evt) => {
+  tipCustom.addEventListener(evt, (e) => {
+    tip = parseInt(e.target.value);
+    if (picked != undefined) picked.classList.remove("pick");
+    picked = e.target;
+    e.target.classList.add("pick");
+    totalbill(tip, parseInt(bill.value), parseInt(numPeople.value));
   });
 });
 
@@ -31,8 +42,12 @@ numPeople.addEventListener("input", (e) => {
 
 const btnReset = document.getElementById("btn-reset");
 
-btnReset.addEventListener("click", () => {
+btnReset.addEventListener("click", (e) => {
   totalbill(0, 0, 0);
+  if (picked != undefined) picked.classList.remove("pick");
+  // console.log(bill.value );
+  bill.value = 0;
+  numPeople.value = 0;
 });
 
 function totalbill(tip = 0, bill = 0, people = 0) {
@@ -42,6 +57,6 @@ function totalbill(tip = 0, bill = 0, people = 0) {
   }
   let total = parseFloat(bill / people);
 
-  document.getElementById("tip-person").innerText = parseFloat(total);
-  document.getElementById("tip-number").innerText = parseFloat(tips);
+  document.getElementById("tip-person").innerText = `$ ${parseFloat(total)}`;
+  document.getElementById("tip-number").innerText = `$ ${parseFloat(tips)}`;
 }
