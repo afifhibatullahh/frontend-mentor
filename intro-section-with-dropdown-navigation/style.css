@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue");
+:root {
+  --color-neutral-1: hsl(0, 0%, 98%);
+  --color-neutral-2: hsl(0, 0%, 41%);
+  --color-neutral-3: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Epilogue", sans-serif;
+}
+body {
+  background-color: var(--color-neutral-1);
+}
+p {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  align-items: center;
+}
+.nav-title {
+  margin-right: 50px;
+}
+.nav-menu {
+  display: flex;
+}
+.nav-content {
+  display: flex;
+}
+.nav-item {
+  margin-right: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-neutral-2);
+}
+.nav-item:hover {
+  color: var(--color-neutral-3);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.dropdown-content a {
+  display: block;
+  margin-top: 10px;
+}
+.dropdown a.nav-item {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.dropdown-item {
+  color: var(--color-neutral-2);
+}
+.dropdown-item:hover {
+  color: var(--color-neutral-3);
+}
+.icon-drop {
+  background-image: url("./images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  height: 14px;
+  width: 14px;
+  background-position: 0px 4px;
+  margin-left: 8px;
+}
+
+.icon-nav {
+  margin-right: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  color: var(--color-neutral-3);
+}
+.dropdown:hover .nav-item {
+  color: var(--color-neutral-3);
+}
+
+.nav-btn button {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-neutral-2);
+  background: var(--color-neutral-1);
+  border: 2px solid var(--color-neutral-1);
+  cursor: pointer;
+}
+.nav-btn button:hover {
+  border: 2px solid var(--color-neutral-3);
+  color: var(--color-neutral-3);
+  border-radius: 10px;
+  outline: none;
+}
+
+main {
+  padding-left: 150px;
+  padding-right: 150px;
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.text-hero {
+  padding-right: 40px;
+  max-width: 500px;
+}
+
+.client {
+  margin-top: 50px;
+}
+
+.image-hero {
+  max-width: 500px;
+  object-fit: contain;
+}
+
+.btn-learn {
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-neutral-1);
+  background: var(--color-neutral-3);
+  border-radius: 10px;
+  border: 1px solid var(--color-neutral-3);
+  margin-top: 40px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.btn-learn:hover {
+  background: var(--color-neutral-1);
+  color: var(--color-neutral-3);
+}
