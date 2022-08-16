@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+:root {
+  --VeryDarkGray: hsl(0, 0%, 17%);
+  --DarkGray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+.container-banner {
+  background: url("./images/pattern-bg.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30vh;
+}
+
+.title {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+}
+.container-search {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  border-radius: 20px;
+}
+
+.input-search {
+  padding: 20px;
+  width: 500px;
+  border: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 18px;
+  color: var(--DarkGray);
+}
+
+.btn-search {
+  width: 50px;
+  border: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--VeryDarkGray);
+  color: white;
+}
+
+.container-info {
+  display: flex;
+  position: absolute;
+  margin-top: -75px;
+  width: 100%;
+  justify-content: center;
+  z-index: 1;
+}
+
+.card-info {
+  display: flex;
+  background: white;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
+}
+
+.item-info {
+  width: 25%;
+}
+h4 {
+  margin-bottom: 5px;
+  color: var(--DarkGray);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 700;
+  color: var(--VeryDarkGray);
+}
+
+.vl {
+  border-left: 1px solid var(--DarkGray);
+  height: 80%;
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
+.container-map {
+  width: 100%;
+  height: 70vh;
+  z-index: 0;
+}
+
+@media 
