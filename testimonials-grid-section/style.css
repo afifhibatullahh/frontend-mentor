@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  /* Color Primary */
+  --color-prm-1: hsl(263, 55%, 52%);
+  --color-prm-2: hsl(217, 19%, 35%);
+  --color-prm-2-5: hsla(217, 19%, 35%, 0.5);
+  --color-prm-3: hsl(219, 29%, 14%);
+  --color-prm-4: hsl(0, 0%, 100%);
+
+  /* Color Neutral */
+  --color-neutral-1: hsl(0, 0%, 81%);
+  --color-neutral-1-5: hsla(0, 0%, 81%, 0.5);
+  --color-neutral-2: hsl(210, 46%, 95%);
+  --color-neutral-2-5: hsla(210, 46%, 95%, 0.5);
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  min-height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--color-neutral-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card1 {
+  grid-area: card1;
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-color: var(--color-prm-1);
+  background-position: 80% 0; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 125px;
+}
+
+.card2 {
+  grid-area: card2;
+  background-color: var(--color-prm-2);
+}
+.card3 {
+  grid-area: card3;
+  background-color: var(--color-prm-4);
+}
+.card4 {
+  grid-area: card4;
+  background-color: var(--color-prm-3);
+}
+.card5 {
+  grid-area: card5;
+  background-color: var(--color-prm-4);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "card1 card1 card2 card5"
+    "card3 card4 card4 card5";
+  gap: 30px;
+  padding: 10px;
+  max-width: 1400px;
+}
+
+.grid-container > div {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.1);
+}
+.profile > img {
+  border-radius: 100%;
+  max-width: 40px;
+  margin-right: 15px;
+}
+.card1 > .profile > img {
+  border: 3px solid var(--color-neutral-2-5);
+}
+.card4 > .profile > img {
+  border: 3px solid var(--color-prm-1);
+}
+/* CARD 1 2 4 */
+.card1 .profile-name,
+.card2 .profile-name,
+.card4 .profile-name {
+  color: var(--color-neutral-2);
+  font-size: 16px;
+}
+.card1 .profile-status,
+.card2 .profile-status,
+.card4 .profile-status {
+  color: var(--color-neutral-2-5);
+  font-size: 13px;
+}
+.card1 .text1,
+.card2 .text1,
+.card4 .text1 {
+  color: var(--color-neutral-2);
+  font-size: larger;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.card1 .text2,
+.card2 .text2,
+.card4 .text2 {
+  color: var(--color-neutral-2-5);
+  font-size: medium;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* CARD 3 5 */
+
+.card3 .profile-name,
+.card5 .profile-name {
+  color: var(--color-prm-2);
+  font-size: 16px;
+}
+.card3 .profile-status,
+.card5 .profile-status {
+  color: var(--color-prm-2-5);
+  font-size: 13px;
+}
+.card3 .text1,
+.card5 .text1 {
+  color: var(--color-prm-2);
+  font-size: larger;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.card3 .text2,
+.card5 .text2 {
+  color: var(--color-prm-2-5);
+  font-size: medium;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 550px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5";
+    gap: 30px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 550px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "card1 card1 "
+      "card2 card3 "
+      "card4 card4 "
+      "card5 card5 ";
+    gap: 30px;
+    padding: 10px;
+  }
+}
