@@ -12,6 +12,7 @@
 }
 body {
   background-color: var(--color-neutral-1);
+  min-height: 100vh;
 }
 p {
   font-size: 18px;
